@@ -1,1 +1,404 @@
-<h1>Hello World Wide Web!</h1>
+<!-- created by Lydia Tseng Apr. 8, 2026 -->
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lydia Tseng - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&family=Roboto&family=Geologica:wght@300&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fafafa;
+        font-family: 'Epilogue', sans-serif;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        height: 2220px;
+      }
+
+      .nav {
+        position: absolute;
+        top: 50px;
+        left: 77px;
+        right: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 52.136px;
+        height: 40.074px;
+        flex-shrink: 0;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .nav-links {
+        position: absolute;
+        right: 95px;
+        display: flex;
+        gap: 70px;
+      }
+
+      .nav-links a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: black;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.7;
+      }
+
+      .home-text {
+        position: absolute;
+        left: 144px;
+        top: 291px;
+        color: black;
+        font-weight: 400;
+      }
+
+      .home-text .line1 {
+        font-size: 64px;
+        line-height: 130px;
+      }
+
+      .home-text .line2 {
+        font-size: 120px;
+        line-height: 130px;
+      }
+
+      /* Images */
+      .photobooth-img-portrait {
+        position: absolute;
+        left: 828px;
+        top: 230px;
+        width: 154.819px;
+        height: 434.901px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+      }
+
+      .photobooth-img-portrait-inner {
+        transform: rotate(-6.35deg);
+        width: 108.429px;
+        height: 425.521px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .photobooth-img-portrait-inner img {
+        position: absolute;
+        height: 100%;
+        left: -4.07%;
+        top: 0;
+        width: 108.14%;
+        max-width: none;
+      }
+
+      .film-img-top {
+        position: absolute;
+        left: 936px;
+        top: 320px;
+        width: 249.021px;
+        height: 204.424px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .film-img-top-inner {
+        transform: rotate(10.73deg);
+        width: 222px;
+        height: 166px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .film-img-top-inner img {
+        position: absolute;
+        height: 100.03%;
+        left: -12.93%;
+        top: -0.01%;
+        width: 112.93%;
+        max-width: none;
+      }
+
+      .img-flower {
+        position: absolute;
+        left: 997px;
+        top: 524px;
+        width: 96.238px;
+        height: 92.65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .img-flower-inner {
+        transform: rotate(14.51deg);
+        width: 80px;
+        height: 75px;
+      }
+
+      .img-flower-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 39px;
+        padding: 10px;
+        border-radius: 20px;
+        background: black;
+        color: white;
+        font-family: 'Geologica', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn:hover {
+        background: #333;
+      }
+
+      .btn-about {
+        position: absolute;
+        left: 144px;
+        top: 569px;
+        width: 150px;
+      }
+
+      .btn-explore {
+        width: 121px;
+      }
+
+      .project-card {
+        position: absolute;
+        left: 113px;
+        width: 1053px;
+        height: 422px;
+        background: white;
+        border-radius: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .card1 {
+        top: 803px;
+      }
+
+      .card2 {
+        top: 1265px;
+      }
+
+      .card3 {
+        top: 1727px;
+      }
+
+      .card-img {
+        position: absolute;
+        left: 47px;
+        top: 40px;
+        width: 478px;
+        height: 341px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-content {
+        position: absolute;
+        left: 565px;
+        top: 52px;
+      }
+
+      .card-title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+
+      .card-desc {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 17px;
+        width: 359px;
+        margin-bottom: 20px;
+      }
+
+      .footer {
+        width: 100%;
+        background: #272727;
+        position: relative;
+        height: 200px;
+      }
+
+      .footer-inner {
+        width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+      }
+
+      .footer-logo {
+        display: block;
+        position: absolute;
+        left: 113px;
+        top: 72px;
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .footer-logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-connect {
+        position: absolute;
+        left: 871px;
+        top: 38px;
+        width: 359px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+        color: #fffffd;
+        line-height: 40px;
+      }
+
+      .footer-icons {
+        position: absolute;
+        top: 82px;
+        left: 960px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+      }
+
+      .footer-icons a {
+        display: block;
+        width: 35px;
+        height: 35px;
+      }
+
+      .footer-icons img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Epilogue", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <nav class="nav">
+        <a href="index.html" class="logo"><img src="LTblackwriting.png" alt="ltblackwriting"></a>
+        <div class="nav-links">
+          <a href="index.html">home</a>
+          <a href="projects.html">projects</a>
+          <a href="about.html">about</a>
+        </div>
+      </nav>
+      <div class="home-text">
+        <div class="line1">hi! i'm</div>
+        <div class="line2">lydia tseng </div>
+      </div>
+      <a href="about.html" class="btn btn-about">about me</a>
+      <div class="photobooth-img-portrait">
+        <div class="photobooth-img-portrait-inner">
+          <img src="LTphotobooth.jpg" alt="LTphotobooth">
+        </div>
+      </div>
+      <div class="film-img-top">
+        <div class="film-img-top-inner">
+          <img src="LTfilm.JPG" alt="LTfilm">
+        </div>
+      </div>
+      <div class="img-flower">
+        <div class="img-flower-inner">
+          <img src="LTorchid.png" alt="LTorchid">
+        </div>
+      </div>
+      <div class="project-card card1">
+        <div class="card-img"><img src="LTsecondnature.png" alt="LTsecondnature"></div>
+        <div class="card-content">
+          <div class="card-title">Second Nature</div>
+          <div class="card-desc">SecondNature is a community-driven platform that encourages sustainable living by connecting people to share, reuse, and reduce waste.</div>
+          <a href="secondnature.html" class="btn btn-explore">explore</a>
+        </div>
+      </div>
+      <div class="project-card card2">
+        <div class="card-img"><img src="LTmateway.png" alt="LTMateWay"></div>
+        <div class="card-content">
+          <div class="card-title">MateWay</div>
+          <div class="card-desc">MateWay is designed to connect underserved communities with essential resources like food, shelter, and clothing through an accessible app and public screen system. It bridges the gap between available support and those who need it most.</div>
+          <a href="mateway.html" class="btn btn-explore">explore</a>
+        </div>
+      </div>
+      <div class="project-card card3">
+        <div class="card-img"><img src="LTleekumkee.png" alt="LTLeeKumKee"></div>
+        <div class="card-content">
+          <div class="card-title" style="line-height:40px;">Lee Kum Kee Redesign</div>
+          <div class="card-desc">This Lee Kum Kee redesign focuses on improving usability and visual hierarchy, creating a cleaner and more intuitive browsing experience. The updated layout emphasizes content discovery while maintaining the brand's identity.</div>
+          <a href="leekumkee.html" class="btn btn-explore">explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo"><img src="LTwhitewriting.png" alt="ltwhitewriting"></a>
+        <div class="footer-connect">Let’s connect!</div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/lydia-tseng-779053328" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
+          <a href="mailto:lydia.tseng27@gmail.com"><img src="Gmail.png" alt="Gmail"></a>
+          <a href="https://www.instagram.com/lydia.tsengg?igsh=cnAzdmNsZWwxbXRl&utm_source=qr" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-copyright">© 2026 Lydia Tseng. All rights reserved.</div>
+      </div>
+    </div>
+  </body>
+</html>

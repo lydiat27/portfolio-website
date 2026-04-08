@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Lydia Tseng</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&family=Roboto&family=Geologica:wght@300&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fafafa;
+        font-family: 'Epilogue', sans-serif;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        height: 1370px;
+      }
+
+      .nav {
+        position: absolute;
+        top: 50px;
+        left: 77px;
+        right: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .nav-links {
+        position: absolute;
+        right: 95px;
+        display: flex;
+        gap: 70px;
+      }
+
+      .nav-links a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: black;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.7;
+      }
+
+      .page-title {
+        position: absolute;
+        top: 115px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 130px;
+        text-align: center;
+      }
+
+      .project-card {
+        position: absolute;
+        background: white;
+        border-radius: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        display: block;
+      }
+
+      .project-card:hover {
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-sn {
+        left: 58px;
+        top: 278px;
+        width: 565px;
+        height: 489px;
+      }
+
+      .card-mw {
+        left: 657px;
+        top: 278px;
+        width: 565px;
+        height: 489px;
+      }
+
+      .card-lkk {
+        left: 61px;
+        top: 812px;
+        width: 565px;
+        height: 505px;
+      }
+
+      .card-label {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 30px;
+        text-align: center;
+        position: absolute;
+        top: 51px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      .card-thumb {
+        position: absolute;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .card-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-sn .card-thumb {
+        left: 47px;
+        top: 121px;
+        width: 478px;
+        height: 341px;
+      }
+
+      .card-mw .card-thumb {
+        left: 44px;
+        top: 100px;
+        width: 478px;
+        height: 341px;
+      }
+
+      .card-lkk .card-thumb {
+        left: 41px;
+        top: 105px;
+        width: 478px;
+        height: 356px;
+        overflow: hidden;
+      }
+
+      .card-lkk .card-label {
+        top: 37px;
+        font-size: 40px;
+        line-height: 40px;
+      }
+
+      .footer {
+        width: 100%;
+        background: #272727;
+        position: relative;
+        height: 200px;
+      }
+
+      .footer-inner {
+        width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+      }
+
+      .footer-logo {
+        display: block;
+        position: absolute;
+        left: 113px;
+        top: 72px;
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .footer-logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-connect {
+        position: absolute;
+        left: 871px;
+        top: 38px;
+        width: 359px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+        color: #fffffd;
+        line-height: 40px;
+      }
+
+      .footer-icons {
+        position: absolute;
+        top: 82px;
+        left: 960px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+      }
+
+      .footer-icons a {
+        display: block;
+        width: 35px;
+        height: 35px;
+      }
+
+      .footer-icons img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Epilogue", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <nav class="nav">
+        <a href="index.html" class="logo"><img src="LTblackwriting.png" alt="ltblackwriting"></a>
+        <div class="nav-links">
+          <a href="index.html">home</a>
+          <a href="projects.html">projects</a>
+          <a href="about.html">about</a>
+        </div>
+      </nav>
+      <div class="page-title">projects</div>
+      <a href="secondnature.html" class="project-card card-sn">
+        <div class="card-label">Second Nature</div>
+        <div class="card-thumb"><img src="LTsecondnature.png" alt="LTSecondNature"></div>
+      </a>
+      <a href="mateway.html" class="project-card card-mw">
+        <div class="card-label">MateWay</div>
+        <div class="card-thumb"><img src="LTmateway.png" alt="LTMateWay"></div>
+      </a>
+      <a href="leekumkee.html" class="project-card card-lkk">
+        <div class="card-label">Lee Kum Kee Redesign</div>
+        <div class="card-thumb"><img src="LTleekumkee.png" alt="LTLeeKumKee"></div>
+      </a>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo"><img src="LTwhitewriting.png" alt="ltwhitewriting"></a>
+        <div class="footer-connect">Let’s connect!</div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/lydia-tseng-779053328" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
+          <a href="mailto:lydia.tseng27@gmail.com"><img src="Gmail.png" alt="Gmail"></a>
+          <a href="https://www.instagram.com/lydia.tsengg?igsh=cnAzdmNsZWwxbXRl&utm_source=qr" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-copyright">© 2026 Lydia Tseng. All rights reserved.</div>
+      </div>
+    </div>
+  </body>
+</html>

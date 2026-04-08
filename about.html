@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Lydia Tseng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&family=Roboto&family=Geologica:wght@300&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fafafa;
+        font-family: 'Epilogue', sans-serif;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        height: 1520px;
+      }
+
+      .nav {
+        position: absolute;
+        top: 50px;
+        left: 77px;
+        right: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .nav-links {
+        position: absolute;
+        right: 95px;
+        display: flex;
+        gap: 70px;
+      }
+
+      .nav-links a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: black;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.7;
+      }
+
+      .page-title {
+        position: absolute;
+        top: 115px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 130px;
+        text-align: center;
+      }
+
+      .portrait-wrap {
+        position: absolute;
+        left: 125px;
+        top: 258px;
+        width: 394.75px;
+        height: 460.777px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .portrait-inner {
+        transform: rotate(-4.09deg);
+        width: 364.566px;
+        height: 435.865px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .portrait-inner img {
+        position: absolute;
+        height: 125.38%;
+        left: 0;
+        top: -20.75%;
+        width: 100%;
+        max-width: none;
+      }
+
+      .img4-wrap {
+        position: absolute;
+        left: 991px;
+        top: 215px;
+        width: 145.395px;
+        height: 171.512px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .img4-inner {
+        transform: rotate(8.43deg);
+        width: 124px;
+        height: 155px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .img4-inner img {
+        position: absolute;
+        height: 146.67%;
+        left: -40%;
+        top: -17.33%;
+        width: 183.33%;
+        max-width: none;
+      }
+
+      .img5-wrap {
+        position: absolute;
+        left: 6px;
+        top: 503px;
+        width: 328.14px;
+        height: 374.637px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .img5-inner {
+        transform: rotate(20.07deg);
+        width: 235px;
+        height: 313px;
+        overflow: hidden;
+      }
+
+      .img5-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .who-am-i {
+        position: absolute;
+        left: 885px;
+        transform: translateX(-50%);
+        top: 321px;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        width: 230px;
+      }
+
+      .bio-text {
+        position: absolute;
+        left: 885px;
+        transform: translateX(-50%);
+        top: 392px;
+        width: 542px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: black;
+      }
+
+      .free-time {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 863px;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      /* LEFT cluster - layering: top camera (front z4), square left (z3), bottom camera (z2), square right (z1) */
+      .img8-wrap {
+        position: absolute;
+        left: 65px;
+        top: 928px;
+        width: 326.516px;
+        height: 250.57px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+      }
+
+      .img8-inner {
+        transform: rotate(-87.54deg);
+        width: 237.183px;
+        height: 316.616px;
+        overflow: hidden;
+      }
+
+      .img8-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* image9 = square left */
+      .img9-wrap {
+        position: absolute;
+        left: 67.38px;
+        top: 1122.48px;
+        width: 239.239px;
+        height: 177.046px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+      }
+
+      .img9-inner {
+        transform: rotate(-8.54deg);
+        width: 220px;
+        height: 146px;
+        overflow: hidden;
+      }
+
+      .img9-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* image6 = bottom camera */
+      .img6-wrap {
+        position: absolute;
+        left: 138px;
+        top: 1162px;
+        width: 390.833px;
+        height: 317.632px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .img6-inner {
+        transform: rotate(-80.77deg);
+        width: 264.426px;
+        height: 352.981px;
+        overflow: hidden;
+      }
+
+      .img6-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* image7 = square right */
+      .img7-wrap {
+        position: absolute;
+        left: 230px;
+        top: 1053px;
+        width: 306.551px;
+        height: 217.362px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .img7-inner {
+        transform: rotate(4.94deg);
+        width: 291px;
+        height: 193px;
+        overflow: hidden;
+      }
+
+      .img7-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* RIGHT cluster - pen (image13) on top of both journals */
+      /* image13 = pen - ON TOP */
+      .img13-wrap {
+        position: absolute;
+        left: 978px;
+        top: 1053px;
+        width: 138.04px;
+        height: 127.841px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+      }
+
+      .img13-inner {
+        transform: rotate(-10deg);
+        width: 121.042px;
+        height: 108.468px;
+        overflow: hidden;
+      }
+
+      .img13-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* image11 = big journal */
+      .img11-wrap {
+        position: absolute;
+        left: 709.95px;
+        top: 980.3px;
+        width: 306.511px;
+        height: 386.433px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .img11-inner {
+        transform: rotate(-6.2deg);
+        width: 269.285px;
+        height: 359.468px;
+        overflow: hidden;
+      }
+
+      .img11-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* image12 = small journal */
+      .img12-wrap {
+        position: absolute;
+        left: 938px;
+        top: 1128px;
+        width: 206.032px;
+        height: 252.541px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+      }
+
+      .img12-inner {
+        transform: rotate(9.76deg);
+        width: 170px;
+        height: 227px;
+        overflow: hidden;
+      }
+
+      .img12-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .caption-left {
+        position: absolute;
+        left: 306.5px;
+        transform: translateX(-50%);
+        top: 1420px;
+        width: 315px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      .caption-right {
+        position: absolute;
+        left: 958.5px;
+        transform: translateX(-50%);
+        top: 1420px;
+        width: 315px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      .footer {
+        width: 100%;
+        background: #272727;
+        position: relative;
+        height: 200px;
+      }
+
+      .footer-inner {
+        width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+      }
+
+      .footer-logo {
+        display: block;
+        position: absolute;
+        left: 113px;
+        top: 72px;
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .footer-logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-connect {
+        position: absolute;
+        left: 871px;
+        top: 38px;
+        width: 359px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+        color: #fffffd;
+        line-height: 40px;
+      }
+
+      .footer-icons {
+        position: absolute;
+        top: 82px;
+        left: 960px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+      }
+
+      .footer-icons a {
+        display: block;
+        width: 35px;
+        height: 35px;
+      }
+
+      .footer-icons img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Epilogue", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <nav class="nav">
+        <a href="index.html" class="logo"><img src="https://www.figma.com/api/mcp/asset/fb3f044e-18a6-4586-8a10-8f4f002fbf87" alt="lt"></a>
+        <div class="nav-links">
+          <a href="index.html">home</a>
+          <a href="projects.html">projects</a>
+          <a href="about.html">about</a>
+        </div>
+      </nav>
+      <div class="page-title">about me</div>
+
+      <div class="portrait-wrap">
+        <div class="portrait-inner">
+          <img src="https://www.figma.com/api/mcp/asset/9d7aae9d-a1c0-4f76-9d32-163eb5cc6af9" alt="Lydia">
+        </div>
+      </div>
+      <div class="img4-wrap">
+        <div class="img4-inner"><img src="https://www.figma.com/api/mcp/asset/e6271887-12aa-4fa1-8791-6a36e2df7142" alt=""></div>
+      </div>
+      <div class="img5-wrap">
+        <div class="img5-inner"><img src="https://www.figma.com/api/mcp/asset/7bddbcd7-318c-45b2-9d77-9544d0fb269a" alt=""></div>
+      </div>
+
+      <div class="who-am-i">who am I?</div>
+      <div class="bio-text">
+        <p>Hi, I'm Lydia, a Global Business and Digital Arts student at the University of Waterloo. I enjoy creating designs that are meaningful and that will help others.</p>
+        <p>I am currently the Vice President of Events for Chinese Student Association and have participated in many designathons.</p>
+        <p>I'm always open to bring my creativity, organized, and detail-oriented self to opportunities where I can learn, grow and contribute to meaningful projects.</p>
+      </div>
+
+      <div class="free-time">in my free time...</div>
+
+      <!-- Left cluster -->
+      <div class="img8-wrap">
+        <div class="img8-inner"><img src="https://www.figma.com/api/mcp/asset/17be4144-309a-456d-b514-e8ef7277b490" alt=""></div>
+      </div>
+      <div class="img9-wrap">
+        <div class="img9-inner"><img src="https://www.figma.com/api/mcp/asset/9637784c-781a-49cf-a466-281187753b80" alt=""></div>
+      </div>
+      <div class="img6-wrap">
+        <div class="img6-inner"><img src="https://www.figma.com/api/mcp/asset/928c728b-efa7-4fed-b56a-5447046834ea" alt=""></div>
+      </div>
+      <div class="img7-wrap">
+        <div class="img7-inner"><img src="https://www.figma.com/api/mcp/asset/dad6a0bd-2151-4a91-b012-4333727b4e5b" alt=""></div>
+      </div>
+
+      <!-- Right cluster -->
+      <div class="img11-wrap">
+        <div class="img11-inner"><img src="https://www.figma.com/api/mcp/asset/f97aeca9-6d49-4e0e-b3e4-62b0f2da0401" alt=""></div>
+      </div>
+      <div class="img12-wrap">
+        <div class="img12-inner"><img src="https://www.figma.com/api/mcp/asset/eb50a805-c076-4a89-951b-3d4592850751" alt=""></div>
+      </div>
+      <div class="img13-wrap">
+        <div class="img13-inner"><img src="https://www.figma.com/api/mcp/asset/9636a8cf-e42f-44b5-b4e6-cca826e6fcb1" alt=""></div>
+      </div>
+
+      <div class="caption-left">I love taking photos of everything and anything</div>
+      <div class="caption-right">I love writing about my day and keeping memories for myself</div>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo"><img src="https://www.figma.com/api/mcp/asset/5a5473fe-3696-4245-9984-badbdd0127ff" alt="lt"></a>
+        <div class="footer-connect">Let’s connect!</div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/lydia-tseng-779053328" target="_blank"><img src="https://www.figma.com/api/mcp/asset/65d33165-bd9f-4954-92da-47ff34939bd4" alt="LinkedIn"></a>
+          <a href="mailto:lydia.tseng27@gmail.com"><img src="https://www.figma.com/api/mcp/asset/0ba1f49f-82cf-4abb-8f37-045cb294acb5" alt="Email"></a>
+          <a href="https://www.instagram.com/lydia.tsengg?igsh=cnAzdmNsZWwxbXRl&utm_source=qr" target="_blank"><img src="https://www.figma.com/api/mcp/asset/a807f382-69aa-4098-bc95-03c5d380104c" alt="Instagram"></a>
+        </div>
+        <div class="footer-copyright">© 2026 Lydia Tseng. All rights reserved.</div>
+      </div>
+    </div>
+  </body>
+</html>
