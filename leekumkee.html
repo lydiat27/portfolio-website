@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee Kum Kee Redesign - Lydia Tseng</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&family=Roboto&family=Geologica:wght@300&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fafafa;
+        font-family: 'Epilogue', sans-serif;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        height: 3610px;
+      }
+
+      .nav {
+        position: absolute;
+        top: 50px;
+        left: 77px;
+        right: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 52px;
+        height: 40px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .nav-links {
+        position: absolute;
+        right: 95px;
+        display: flex;
+        gap: 70px;
+      }
+
+      .nav-links a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: black;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.7;
+      }
+
+      .project-title {
+        position: absolute;
+        left: 77px;
+        top: 170px;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 80px;
+        width: 1004px;
+      }
+
+      .title-row {
+        position: absolute;
+        top: 340px;
+        left: 77px;
+        display: flex;
+        width: 1100px;
+      }
+
+      .title-col {
+        flex: 1;
+      }
+
+      .title-label {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      .title-value {
+        font-weight: 400;
+        font-size: 28px;
+        white-space: nowrap;
+      }
+
+      .main-img {
+        position: absolute;
+        left: 78px;
+        top: 499px;
+        width: 1123px;
+        height: 826px;
+        border-radius: 40px;
+        overflow: hidden;
+      }
+
+      .main-img img {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0%;
+        width: 100%;
+        max-width: none;
+      }
+
+      .section-title {
+        font-weight: 500;
+        font-size: 36px;
+        position: absolute;
+        left: 86px;
+      }
+
+      .section-text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.25;
+        position: absolute;
+        left: 86px;
+        letter-spacing: -0.44px;
+      }
+
+      .process-img1 {
+        position: absolute;
+        left: 86px;
+        top: 1761px;
+        width: 595px;
+        height: 367px;
+        overflow: hidden;
+      }
+
+      .process-img1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .process-img2 {
+        position: absolute;
+        left: 751px;
+        top: 1740px;
+        width: 419px;
+        height: 373px;
+        overflow: hidden;
+      }
+
+      .process-img2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .solution-img {
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .solution-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      ul.process-list {
+        position: absolute;
+        left: 86px;
+        list-style: disc;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.25;
+        letter-spacing: -0.44px;
+        width: 1038px;
+      }
+
+      ul.process-list li {
+        margin-left: 30px;
+        margin-bottom: 4px;
+      }
+
+      .takeaway-box {
+        position: absolute;
+        left: 160px;
+        top: 3342px;
+        width: 959px;
+        height: 217px;
+        background: #cadff5;
+        border-radius: 20px;
+      }
+
+      .takeaway-text {
+        position: absolute;
+        top: 3397px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 713px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: -0.528px;
+      }
+
+      .footer {
+        width: 100%;
+        background: #272727;
+        position: relative;
+        height: 200px;
+      }
+
+      .footer-inner {
+        width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+      }
+
+      .footer-logo {
+        display: block;
+        position: absolute;
+        left: 113px;
+        top: 72px;
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .footer-logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-connect {
+        position: absolute;
+        left: 871px;
+        top: 38px;
+        width: 359px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+        color: #fffffd;
+        line-height: 40px;
+      }
+
+      .footer-icons {
+        position: absolute;
+        top: 82px;
+        left: 960px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+      }
+
+      .footer-icons a {
+        display: block;
+        width: 35px;
+        height: 35px;
+      }
+
+      .footer-icons img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Epilogue", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <nav class="nav">
+        <a href="index.html" class="logo"><img src="LTblackwriting.png" alt="lt"></a>
+        <div class="nav-links">
+          <a href="index.html">home</a>
+          <a href="projects.html">projects</a>
+          <a href="about.html">about</a>
+        </div>
+      </nav>
+
+      <div class="project-title">Lee Kum Kee Website Redesign</div>
+
+      <div class="title-row">
+        <div class="title-col">
+          <div class="title-label">CONTEXT</div>
+          <div class="title-value">School Project</div>
+        </div>
+        <div class="title-col">
+          <div class="title-label">ROLE</div>
+          <div class="title-value">Interface Design</div>
+        </div>
+        <div class="title-col">
+          <div class="title-label">TOOLS USED</div>
+          <div class="title-value">Figma</div>
+        </div>
+      </div>
+
+      <div class="main-img"><img src="LTmain.png" alt="Lee Kum Kee hero"></div>
+
+      <div class="section-title" style="top:1429px;">Problem</div>
+      <div class="section-text" style="top:1485px;width:798px;">The current Lee Kum Kee website feels outdated and lacks a clear visual hierarchy, making it difficult for users to navigate and discover products efficiently. I decided that a redesign was needed to improve usability, modernize the interface, and better showcase the brand's global identity.</div>
+
+      <div class="section-title" style="top:1689px;">Process</div>
+      <div class="process-img1"><img src="LTsitemap.png" alt="Sitemap"></div>
+      <div class="process-img2"><img src="LTlegacy.png" alt="Legacy page"></div>
+
+      <ul class="process-list" style="top:2223px;">
+        <li>I started off by creating a site map of the original website, to me it was too cluttered and hard to navigate</li>
+        <li>By figuring out what I wanted to remove, I started piecing together how I wanted the homepage to look</li>
+        <li>I made sure to keep all the pages simple and aesthetically pleasing</li>
+        <li>A lot of trials and errors went into this process but, ultimately I finalized my designs</li>
+      </ul>
+
+      <div class="section-title" style="top:2401px;">Solution</div>
+      <div class="solution-img" style="left:145px;top:2474px;width:477px;height:717px;"><img src="LTAboutUs.png" alt="About Us redesign"></div>
+      <div class="solution-img" style="left:681px;top:2474px;width:477px;height:718px;"><img src="LTProducts.png" alt="Products redesign"></div>
+
+      <div class="section-title" style="top:3263px;">Key Takeaway</div>
+      <div class="takeaway-box"></div>
+      <div class="takeaway-text">This redesign demonstrates how improving visual hierarchy and usability can transform a traditional website into a more engaging and intuitive user experience.</div>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo"><img src="LTwhitewriting.png" alt="lt"></a>
+        <div class="footer-connect">Let's connect!</div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/lydia-tseng-779053328" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
+          <a href="mailto:lydia.tseng27@gmail.com"><img src="Gmail.png" alt="Gmail"></a>
+          <a href="https://www.instagram.com/lydia.tsengg?igsh=cnAzdmNsZWwxbXRl&utm_source=qr" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-copyright">© 2026 Lydia Tseng. All rights reserved.</div>
+      </div>
+    </div>
+  </body>
+</html>
