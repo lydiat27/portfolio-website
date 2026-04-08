@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Nature - Lydia Tseng</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&family=Roboto&family=Geologica:wght@300&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fafafa;
+        font-family: 'Epilogue', sans-serif;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        height: 3610px;
+      }
+
+      .nav {
+        position: absolute;
+        top: 50px;
+        left: 77px;
+        right: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .nav-links {
+        position: absolute;
+        right: 95px;
+        display: flex;
+        gap: 70px;
+      }
+
+      .nav-links a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: black;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.7;
+      }
+
+      .project-title {
+        position: absolute;
+        left: 77px;
+        top: 170px;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 80px;
+      }
+
+      .project-subtitle {
+        position: absolute;
+        left: 78px;
+        top: 258px;
+        font-weight: 400;
+        font-size: 20px;
+      }
+
+      .title-row {
+        position: absolute;
+        top: 340px;
+        left: 77px;
+        display: flex;
+        gap: 0;
+        width: 1100px;
+      }
+
+      .title-col {
+        flex: 1;
+      }
+
+      .title-label {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      .title-value {
+        font-weight: 400;
+        font-size: 28px;
+        white-space: nowrap;
+      }
+
+      .main-img {
+        position: absolute;
+        left: 78px;
+        top: 460px;
+        width: 1123px;
+        height: 721px;
+        border-radius: 40px;
+        overflow: hidden;
+      }
+
+      .main-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .section-title {
+        font-weight: 500;
+        font-size: 36px;
+        position: absolute;
+        left: 86px;
+      }
+
+      .section-text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.25;
+        position: absolute;
+        left: 86px;
+        letter-spacing: -0.44px;
+      }
+
+      .process-img {
+        position: absolute;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .process-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .solution-img {
+        position: absolute;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .takeaway-box {
+        position: absolute;
+        left: 160px;
+        top: 3342px;
+        width: 959px;
+        height: 217px;
+        background: #cadff5;
+        border-radius: 20px;
+      }
+
+      .takeaway-text {
+        position: absolute;
+        top: 3397px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 713px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: -0.528px;
+      }
+
+      ul.research-list {
+        position: absolute;
+        left: 78px;
+        list-style: disc;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.25;
+        letter-spacing: -0.44px;
+        width: 1045px;
+      }
+
+      ul.research-list li {
+        margin-left: 30px;
+        margin-bottom: 4px;
+      }
+
+      .footer {
+        width: 100%;
+        background: #272727;
+        position: relative;
+        height: 200px;
+      }
+
+      .footer-inner {
+        width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+      }
+
+      .footer-logo {
+        display: block;
+        position: absolute;
+        left: 113px;
+        top: 72px;
+        width: 52.136px;
+        height: 40.074px;
+      }
+
+      .footer-logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-connect {
+        position: absolute;
+        left: 871px;
+        top: 38px;
+        width: 359px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+        color: #fffffd;
+        line-height: 40px;
+      }
+
+      .footer-icons {
+        position: absolute;
+        top: 82px;
+        left: 960px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+      }
+
+      .footer-icons a {
+        display: block;
+        width: 35px;
+        height: 35px;
+      }
+
+      .footer-icons img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Epilogue", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <nav class="nav">
+        <a href="index.html" class="logo"><img src="LTblackwriting.png" alt="lt"></a>
+        <div class="nav-links">
+          <a href="index.html">home</a>
+          <a href="projects.html">projects</a>
+          <a href="about.html">about</a>
+        </div>
+      </nav>
+
+      <div class="project-title">Second Nature</div>
+      <div class="project-subtitle">Where sustainability should be Second Nature</div>
+
+      <div class="title-row">
+        <div class="title-col">
+          <div class="title-label">CONTEXT</div>
+          <div class="title-value">FLOW Designathon</div>
+        </div>
+        <div class="title-col">
+          <div class="title-label">ROLE</div>
+          <div class="title-value">Researcher, Designer</div>
+        </div>
+        <div class="title-col">
+          <div class="title-label">TOOLS USED</div>
+          <div class="title-value">Figma</div>
+        </div>
+      </div>
+
+      <div class="main-img"><img src="LTdualphone.png" alt="Second Nature dual phone"></div>
+
+      <div class="section-title" style="top:1311px;">Problem</div>
+      <div class="section-text" style="top:1367px;width:758px;">How might we encourage sustainable community practices: Barriers and stigma involved in using second hand products</div>
+
+      <div class="section-title" style="top:1466px;">Research</div>
+      <ul class="research-list" style="top:1526px;">
+        <li>Thrift store prices have risen nearly 30% from 2020 - 2024</li>
+        <li>92 million tonnes of clothes end up in landfills</li>
+        <li>The average Canadian household contributes 140 kilograms of yearly food waste, with Canada wasting over $20 billion in food yearly</li>
+      </ul>
+
+      <div class="section-title" style="top:1690px;">Process</div>
+      <div class="process-img" style="left:78px;top:1764px;width:550px;height:411px;"><img src="LTprocess1.png" alt="Process 1"></div>
+      <div class="process-img" style="left:659px;top:1764px;width:550px;height:412px;">
+        <img src="LTprocess2.png" alt="Process 2" style="position:absolute;height:100.73%;left:-0.05%;top:-0.73%;width:100.11%;max-width:none;">
+      </div>
+
+      <div class="section-text" style="top:2250px;width:920px;line-height:1.25;">
+        We began by figuring out our name. We wanted something that would relate to others and that would stick.<br><br>
+        Then we addressed the problem, Second Nature transforms the act of buying into a meaningful partnership between communities. Instead of fleeting transactions, our platform builds lasting bonds by focusing on hyper-local exchanges. While others profit, we prioritise sustainability.
+      </div>
+
+      <div class="section-title" style="top:2450px;">Solution</div>
+      <div class="solution-img" style="left:86px;top:2542px;width:1053px;height:581px;">
+        <img src="LTsolution.png" alt="Solution" style="position:absolute;height:102.1%;left:-1.8%;top:-2.1%;width:101.8%;max-width:none;">
+      </div>
+
+      <div class="section-text" style="top:3178px;width:1154px;line-height:1.5;">Rethink consumerism by encouraging borrowing, renting, and sharing within a community</div>
+
+      <div class="section-title" style="top:3263px;">Key Takeaway</div>
+      <div class="takeaway-box"></div>
+      <div class="takeaway-text">Sustainability becomes more impactful when it's rooted in community, not just individual action. Giving users a platform to get help and give help makes it easier for everyone.</div>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo"><img src="LTwhitewriting.png" alt="lt"></a>
+        <div class="footer-connect">Let’s connect!</div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/lydia-tseng-779053328" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
+          <a href="mailto:lydia.tseng27@gmail.com"><img src="Gmail.png" alt="Gmail"></a>
+          <a href="https://www.instagram.com/lydia.tsengg?igsh=cnAzdmNsZWwxbXRl&utm_source=qr" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-copyright">© 2026 Lydia Tseng. All rights reserved.</div>
+      </div>
+    </div>
+  </body>
+</html>
